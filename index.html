@@ -5,9 +5,18 @@
     <title>
         We are surreal festival  
     </title>
+    <!----------- Killian's Fonts ---------->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
+
+    <!----------- Melisse's Fonts ---------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+
+
+    <!------------ other links ------------>
     <link rel="icon" href="commonFiles/img/grrrndZero.png">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link href="style.css" rel="stylesheet"/>
@@ -20,7 +29,7 @@
 
 <!------------------------------------------ Header ---------------------------------------->
 
-            <header>
+            <header id="header">
 
                 <div id="typoContainer">
                     
@@ -42,7 +51,7 @@
                 </div>
                 <a href="#bookingSection">
                     <div id="bookingButton">
-                        <img src="commonFiles/img/bookingIcon.png">
+                        <img src="commonFiles/img/bookingIconBlack.png" id="bookingIcon">
                     </div>
                 </a>
             </div>
@@ -54,52 +63,54 @@
                 <div id="concertsContainer">
 
                     <div id="concertsTitleContainer">
-
-                        <div id="concertsSwiper">
-
-                            <div class="swiper">
-
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide" id="concertSlide1"><img src="https://cdn.pixabay.com/photo/2021/11/16/08/01/animal-6800387_960_720.jpg"></div>
-                                    <div class="swiper-slide" id="concertSlide2"><img src="https://cdn.pixabay.com/photo/2020/05/01/16/42/palacio-nacional-de-mafra-5118010_960_720.jpg"></div>
-                                    <div class="swiper-slide" id="concertSlide3"><img src="https://cdn.pixabay.com/photo/2021/12/10/15/15/coleus-6860722_960_720.jpg"></div>
-                                </div>
-
-                                <div class="swiper-pagination"></div>
-                            
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div>
-
-                            </div>
-                        </div>
                     </div>
 
+                    <div id="concertsSwiper">
+
+                        <div class="swiper">
+
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" id="concertSlide1"><img src="https://cdn.pixabay.com/photo/2021/11/16/08/01/animal-6800387_960_720.jpg"></div>
+                                <div class="swiper-slide" id="concertSlide2"><img src="https://cdn.pixabay.com/photo/2020/05/01/16/42/palacio-nacional-de-mafra-5118010_960_720.jpg"></div>
+                                <div class="swiper-slide" id="concertSlide3"><img src="https://cdn.pixabay.com/photo/2021/12/10/15/15/coleus-6860722_960_720.jpg"></div>
+                            </div>
+
+                            <div class="swiper-pagination"></div>
+                        
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+
+                        </div>
+                    </div>
                 </div>
 
 <!------------------------------------------ Conferences ---------------------------------------->
 
                 <div id="conferencesContainer">
+
                     <div id="conferencesTitleContainer">
-                        <div id="conferencesSwiper">
-                            <div class="swiper">
+                    </div>
 
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide" id="conferenceSlide1">Slide 1</div>
-                                    <div class="swiper-slide" id="conferenceSlide2">Slide 2</div>
-                                    <div class="swiper-slide" id="conferenceSlide3">Slide 3</div>
-                                </div>
+                    <div id="conferencesSwiper">
 
-                                <div class="swiper-pagination"></div>
-                            
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div>
+                        <div class="swiper">
 
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" id="conferenceSlide1">Slide 1</div>
+                                <div class="swiper-slide" id="conferenceSlide2">Slide 2</div>
+                                <div class="swiper-slide" id="conferenceSlide3">Slide 3</div>
                             </div>
+
+                            <div class="swiper-pagination"></div>
+                        
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+
                         </div>
                     </div>
                 </div>
 
-<!------------------------------------------ Conferences ---------------------------------------->
+<!------------------------------------------ Closing tags and script ---------------------------------------->
 
             </div> <!--id="contentContainer" closing tag-->
         </div> <!--id="body" closing tag-->

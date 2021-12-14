@@ -1,7 +1,9 @@
 let typoSelector = document.querySelector("#typoContainer")
 
 let xhttp = new XMLHttpRequest();
-let header= document.getElementsByTagName("header");
+let header= document.getElementById("header");
+let bookingIcon = document.getElementById("bookingIcon")
+let bookingButton = document.getElementById("bookingButton")
 
 // ------------------ Get URL Parameters ------------------//
 
@@ -16,6 +18,7 @@ if(search_params.has('version')) {
             let response_V1=this.responseText;
             let baptisteInfos = JSON.parse(response_V1);
             header.style.backgroundImage = baptisteInfos.backgroundImage
+            typoSelector.innerHTML = baptisteInfos.textForExample
         }
     };
     
@@ -28,6 +31,7 @@ if(search_params.has('version')) {
         let response_V2=this.responseText;
         let killianInfos = JSON.parse(response_V2);
         header.style.backgroundImage = killianInfos.backgroundImage
+        typoSelector.innerHTML = killianInfos.textForExample
     }
     };
 
@@ -40,6 +44,7 @@ if(search_params.has('version')) {
             let response_V3=this.responseText;
             let melisseInfos = JSON.parse(response_V3);
             header.style.backgroundImage = melisseInfos.backgroundImage
+            typoSelector.innerHTML = melisseInfos.textForExample
         }
     };
     
@@ -101,3 +106,14 @@ let x = setInterval(function() {
     document.getElementById("demo").innerHTML = "Le festival a commencé";
   }
 }, 1000);
+
+//------------------------- booking icon --------------------//
+
+bookingButton.addEventListener('mouseenter', (e) => {
+  bookingIcon.src = "commonFiles/img/bookingIcon.png"
+}, false)
+
+bookingButton.addEventListener('mouseleave', (e) => {
+  bookingIcon.src = "commonFiles/img/bookingIconBlack.png"
+}, false)
+
