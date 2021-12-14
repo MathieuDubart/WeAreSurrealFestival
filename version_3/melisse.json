@@ -1,9 +1,9 @@
 {
-    "fontFamily" : "",
+    "fontFamily" : "'Dela Gothic One', cursive;",
     "colorOne": "#9ecca8",
     "colorTwo": "white",
     "ColorThree": "black",
-
+    "backgroundColor": "",
     "textForExample": "Hello world this is melisse's text and its used to display an exemple for my creator.",
     "backgroundImage": "url('version_3/img/backgroundImage.jpg')"
 }

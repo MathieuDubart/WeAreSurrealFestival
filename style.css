@@ -11,7 +11,7 @@ body::-webkit-scrollbar {
 body {
     -ms-overflow-style: none;
     scrollbar-width: none;
-    background-color: lightgrey;
+    background-color: #dfdfdf;
 }
 
 #pageContainer {
@@ -111,7 +111,7 @@ header {
 #countdownContainer {
     font-size: 40px;
     border-radius: 15px;
-    background-color: #9ecca8;
+    background-color: white;
     height: 80px;
     width: 500px;
     position: sticky;
@@ -132,7 +132,7 @@ header {
 #bookingButton {
     width: 50px;
     height: 50px;
-    background-color: #9ecca8;
+    background-color: white;
     border: black 1px solid;
     transition: 0.5s;
     user-select: none;
@@ -163,20 +163,33 @@ header {
 }
 
 #concertsTitleContainer {
-    border: white 1px solid;
+    color:black;
+    border: black 1px solid;
+    border-radius: 15px;
     font-size: 65px;
     width: 270px;
     transform: rotateZ(270deg);
     position: absolute;
-    top: calc(100% + 270px)
+    top: calc(100% + 255px)
 }
 
 #conferencesContainer {
-    border: orchid 1px solid;
-    /* margin-top: 36px; */
-    background-color: orchid;
+    border: white 1px solid;
+    margin-top: 36px;
+    background-color: white;
     height: 450px;
+}
 
+#conferencesTitleContainer {
+    color: black;
+    border: black 1px solid;
+    border-radius: 15px;
+    font-size: 65px;
+    width: 380px;
+    transform: rotateZ(270deg);
+    position: absolute;
+    top: calc(100% + 750px);
+    left: -50px;
 }
 
 #concertsSwiper {
@@ -189,9 +202,27 @@ header {
 
 #conferencesSwiper {
     height: 350px;
-    width: 900px;
+    width: 1100px;
     position: relative;
-    top: calc(50% - 192.5px);
+    top: calc(50% - 195px);
+    left: calc(50% - 700px);
+}
+
+#displayMoreButton {
+    margin-top: 24px;
+    border: black 1px solid;
+    border-radius: 50px;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: calc(50% - 25px);
+    transition: 1s;
+}
+
+#displayMoreButton:hover {
+    transform: scale(1.2);
+    transition: 1s;
 }
 
 .swiper {
@@ -202,13 +233,13 @@ header {
 .swiper-slide {
     background-position: center;
     background-size: cover;
-    width: 350px;
+    width: 450px;
     height: 100%;
   }
 
   .swiper-slide img {
     display: block;
-    width: 350px;
+    width: 450px;
     height: 350px;
-    border: 1px solid black;
+    border-radius: 15px;
   }

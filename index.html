@@ -74,38 +74,18 @@
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <img src="https://cdn.pixabay.com/photo/2021/11/16/08/01/animal-6800387_960_720.jpg">
+                                    <img src="https://cdn.pixabay.com/photo/2021/11/16/08/01/animal-6800387_960_720.jpg" id="concertImg1">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="https://cdn.pixabay.com/photo/2020/05/01/16/42/palacio-nacional-de-mafra-5118010_960_720.jpg">
+                                    <img src="https://cdn.pixabay.com/photo/2020/05/01/16/42/palacio-nacional-de-mafra-5118010_960_720.jpg" id="concertImg2">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="https://cdn.pixabay.com/photo/2021/12/10/15/15/coleus-6860722_960_720.jpg">
+                                    <img src="https://cdn.pixabay.com/photo/2021/12/10/15/15/coleus-6860722_960_720.jpg" id="concertImg3">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" id="concertImg4"/>
                                 </div>
                             </div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-
-                            <div class="swiper-pagination"></div>
-
                         </div>
                     </div>
                 </div>
@@ -122,24 +102,84 @@
 
                         <div class="swiper">
 
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide" id="conferenceSlide1">Slide 1</div>
-                                <div class="swiper-slide" id="conferenceSlide2">Slide 2</div>
-                                <div class="swiper-slide" id="conferenceSlide3">Slide 3</div>
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="https://cdn.pixabay.com/photo/2021/11/16/08/01/animal-6800387_960_720.jpg" id="conferenceImg1">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="https://cdn.pixabay.com/photo/2020/05/01/16/42/palacio-nacional-de-mafra-5118010_960_720.jpg" id="conferenceImg2">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="https://cdn.pixabay.com/photo/2021/12/10/15/15/coleus-6860722_960_720.jpg" id="conferenceImg3">
+                                    </div>
+                                </div>
                             </div>
-
-                            <div class="swiper-pagination"></div>
-                        
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
 
                         </div>
                     </div>
                 </div>
 
+<!------------------------------------------ Booking ---------------------------------------->
+
+                <div id="bookingContainer">
+                    <div id="bookingTitleContainer">
+                        Réserver
+                    </div>
+
+                    <select name="pass" id="pass-select">
+                        <option value="1day"> Pass 1 jour</option>
+                        <option value="2days"> Pass 2 jours</option>
+                        <option value="3days"> Pass 3 jours</option>
+                    </select>
+
+                    <select name="quantity" id="quantity-select">
+                        <option value="q1"> 1 </option>
+                        <option value="q2"> 2 </option>
+                        <option value="q3"> 3 </option>
+                        <option value="q4"> 4 </option>
+                    </select>
+
+                    <button id="addToCart">Ajouter au panier</button>
+                </div>
+
+<!------------------------------------------ Instagram ---------------------------------------->
+
+                <div id="instagramContainer">
+                    <div id="instagramTitleContainer">
+                      Instagram
+                    </div>
+                    <div id="instagramSwiper">
+                        <div class="swiper">
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="https://cdn.pixabay.com/photo/2021/11/16/08/01/animal-6800387_960_720.jpg" id="instagramImg1">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="https://cdn.pixabay.com/photo/2020/05/01/16/42/palacio-nacional-de-mafra-5118010_960_720.jpg" id="instagramImg2">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="https://cdn.pixabay.com/photo/2021/12/10/15/15/coleus-6860722_960_720.jpg" id="instagramImg3">
+                                    </div>
+                                    <div class="swiper-slide">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                  </div>
+
 <!------------------------------------------ Closing tags and script ---------------------------------------->
+                <div id="displayMoreButton">
+                    <div id="displayMoreIcon">
+                        <img src="commonFiles/img/addIcon.png">
+                    </div>
+                </div>
 
             </div> <!--id="contentContainer" closing tag-->
+
         </div> <!--id="body" closing tag-->
     </div> <!--id="pageContainer" closing tag-->
 
