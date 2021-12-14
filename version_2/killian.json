@@ -1,7 +1,8 @@
 {
-    "fontFamily":"Montserrat",
+    "fontFamily":"'Montserrat', sans-serif;",
     "color":"",
     "backgroundColor":"",
     "textForExample": "Hello world this is killian's text and its used to display an exemple for my creator.",
-    "backgroundImage": "url('version_2/img/backgroundImage2.jpg')"
+    "backgroundImage": "url('version_2/img/backgroundImage.jpg')",
+    "bodyColor":""
 }

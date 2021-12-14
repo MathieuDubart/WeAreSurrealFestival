@@ -1,9 +1,9 @@
 {
     "fontFamily" : "",
-    "color": "",
-    "colorTwo": "",
-    "ColorThree": "",
-    "backgroundColor":"",
+    "colorOne": "#9ecca8",
+    "colorTwo": "white",
+    "ColorThree": "black",
+
     "textForExample": "Hello world this is melisse's text and its used to display an exemple for my creator.",
-    "backgroundImage": "url('https://cdn.pixabay.com/photo/2021/12/10/15/15/coleus-6860722_960_720.jpg')"
+    "backgroundImage": "url('version_3/img/backgroundImage.jpg')"
 }

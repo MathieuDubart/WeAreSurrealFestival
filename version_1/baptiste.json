@@ -4,5 +4,5 @@
     "colorTwo": "white",
     "backgroundColor": "black",
     "textForExample": "Hello world this is baptiste's text and its used to display an exemple for my creator.",
-    "backgroundImage": "url('https://cdn.pixabay.com/photo/2021/11/16/08/01/animal-6800387_960_720.jpg')"
+    "backgroundImage": "url('version_1/img/backgroundImage.jpg')"
 }
