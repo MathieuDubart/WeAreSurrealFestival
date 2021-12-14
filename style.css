@@ -46,6 +46,7 @@ header {
     font-size: 14px;
     text-align: center;
     color: white;
+    user-select: none;
 }
 
 #pdfButtonContainer:hover {
@@ -55,4 +56,48 @@ header {
 
 #contentContainer {
     height: 1080px;
+}
+
+#countdownContainer {
+    font-size: 40px;
+    border-radius: 15px;
+    background-color: white;
+    width: 500px;
+    border: greenyellow 1px solid;
+    position: sticky;
+    left: calc(50% - 250px);
+    bottom: 24px;
+    top:  24px;
+    z-index:5;
+}
+
+#countdown {
+    left: 24px
+}
+
+#countdownContainer img{
+    height: 40px;
+    width: 40px;
+}
+
+
+#bookingButton {
+    width: 50px;
+    background-color: rgba(114, 114, 114, 0.7);
+    user-select: none;
+    position: absolute;
+    right: 24px;
+    top: 0;
+    text-align: center;
+    border-radius: 50px;
+}
+
+#bookingButton:hover {
+    background-color: rgba(114, 114, 114, 1);
+}
+
+.swiper {
+    width: 600px;
+    height: 300px;
+    border: solid 1px green;
 }

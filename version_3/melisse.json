@@ -1,0 +1,9 @@
+{
+    "fontFamily" : "",
+    "color": "",
+    "colorTwo": "",
+    "ColorThree": "",
+    "backgroundColor":"",
+    "textForExample": "Hello world i'm a text that's used to display an exemple for my creator.",
+    "backgroundImage": "url('https://cdn.pixabay.com/photo/2021/12/10/15/15/coleus-6860722_960_720.jpg')"
+}

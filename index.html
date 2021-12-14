@@ -8,16 +8,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" href="commonFiles/img/grrrndZero.png">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link href="style.css" rel="stylesheet"/>
 </head>
 
 <body>
     <div id="pageContainer">
         <div id="body">
+
+
+<!------------------------------------------ Header ---------------------------------------->
+
             <header>
 
                 <div id="typoContainer">
-                    <p></p>
+                    
                 </div>
 
                 <div id="datesContainer">
@@ -28,14 +34,78 @@
                 </div> </a>
 
             </header>
+
+<!------------------------------------------ Countdown ---------------------------------------->
+
+            <div id="countdownContainer">
+                <div id="countdown">
+                </div>
+                <a href="#bookingSection">
+                    <div id="bookingButton">
+                        <img src="commonFiles/img/bookingIcon.png">
+                    </div>
+                </a>
+            </div>
+
+<!------------------------------------------ Concerts ----------------------------------------->
+
             <div id="contentContainer">
 
-            </div>
-        </div>
-    </div>
-        <script type="text/javascript" src="bapt/baptiste.json"></script>
-        <script type="text/javascript" src="kiki/killian.json"></script>
-        <script type="text/javascript" src="mel/melisse.json"></script>
+                <div id="concertsContainer">
+
+                    <div id="concertsTitleContainer">
+
+                        <div id="concertsSwiper">
+
+                            <div class="swiper">
+
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" id="concertSlide1"><img src="https://cdn.pixabay.com/photo/2021/11/16/08/01/animal-6800387_960_720.jpg"></div>
+                                    <div class="swiper-slide" id="concertSlide2"><img src="https://cdn.pixabay.com/photo/2020/05/01/16/42/palacio-nacional-de-mafra-5118010_960_720.jpg"></div>
+                                    <div class="swiper-slide" id="concertSlide3"><img src="https://cdn.pixabay.com/photo/2021/12/10/15/15/coleus-6860722_960_720.jpg"></div>
+                                </div>
+
+                                <div class="swiper-pagination"></div>
+                            
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+<!------------------------------------------ Conferences ---------------------------------------->
+
+                <div id="conferencesContainer">
+                    <div id="conferencesTitleContainer">
+                        <div id="conferencesSwiper">
+                            <div class="swiper">
+
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" id="conferenceSlide1">Slide 1</div>
+                                    <div class="swiper-slide" id="conferenceSlide2">Slide 2</div>
+                                    <div class="swiper-slide" id="conferenceSlide3">Slide 3</div>
+                                </div>
+
+                                <div class="swiper-pagination"></div>
+                            
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!------------------------------------------ Conferences ---------------------------------------->
+
+            </div> <!--id="contentContainer" closing tag-->
+        </div> <!--id="body" closing tag-->
+    </div> <!--id="pageContainer" closing tag-->
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
