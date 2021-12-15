@@ -5,16 +5,23 @@
     <title>
         We are surreal festival  
     </title>
+    <!----------- Baptiste's Fonts ---------->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+
     <!----------- Killian's Fonts ---------->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
 
     <!----------- Melisse's Fonts ---------->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
-
 
     <!------------ other links ------------>
     <link rel="icon" href="commonFiles/img/grrrndZero.png">
@@ -32,13 +39,15 @@
             <header id="header">
 
                 <div id="typoContainer">
-                    
+                    WE ARE <br/>
+                   <p id="surrealText"> SURREAL </p>
+                    FESTIVAL <br/>
                 </div>
 
                 <div id="datesContainer">
                 </div>
                 
-                <a href="commonFiles/brochure.pdf" download="brochure.pdf" target="_blank"> <div id="pdfButtonContainer">
+                <a href="commonFiles/brochure.pdf" download="brochure.pdf" target="_blank" id="pdfDownload"> <div id="pdfButtonContainer">
                     Brochure <div id="pdfIcon"> <img src="commonFiles/img/pdfIcon.png"></div>
                 </div> </a>
 
@@ -52,12 +61,12 @@
             <div id="countdownContainer">
                 <div id="countdown">
                 </div>
-                <a href="#bookingSection">
+                <a href="#bookingContainer">
                     <div id="bookingButton">
                         <img src="commonFiles/img/bookingIconBlack.png" id="bookingIcon">
                     </div>
                 </a>
-            </div>
+            </div> <br/> <br/>
 
 <!------------------------------------------ Concerts ----------------------------------------->
 
@@ -66,10 +75,10 @@
                 <div id="concertsContainer">
 
                     <div id="concertsTitleContainer">
-                        Concerts
+                        CONCERTS
                     </div>
 
-                    <div id="concertsSwiper">
+                    <div class="divSwiper">
 
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
@@ -95,10 +104,10 @@
                 <div id="conferencesContainer">
 
                     <div id="conferencesTitleContainer">
-                        Conférences
+                        CONFERENCES
                     </div>
 
-                    <div id="conferencesSwiper">
+                    <div class="divSwiper">
 
                         <div class="swiper">
 
@@ -124,7 +133,7 @@
 
                 <div id="bookingContainer">
                     <div id="bookingTitleContainer">
-                        Réserver
+                        RESERVER
                     </div>
 
                     <select name="pass" id="pass-select">
@@ -141,26 +150,33 @@
                     </select>
 
                     <button id="addToCart">Ajouter au panier</button>
-                </div>
 
-<!------------------------------------------ Instagram ---------------------------------------->
-
-                <div id="instagramContainer">
-                    <div id="instagramTitleContainer">
-                      Instagram
+                    <div id="displayMoreButton">
+                        <div id="displayMoreIcon">
+                            <img src="commonFiles/img/addIcon.png">
+                        </div>
                     </div>
-                    <div id="instagramSwiper">
+                </div>
+                
+<!------------------------------------------ Expositions ---------------------------------------->
+
+                <div id="exposContainer">
+                    <div id="exposTitleContainer">
+                      EXPOSITONS
+                    </div>
+
+                    <div class="divSwiper">
                         <div class="swiper">
                             <div class="swiper mySwiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="https://cdn.pixabay.com/photo/2021/11/16/08/01/animal-6800387_960_720.jpg" id="instagramImg1">
+                                        <img src="https://cdn.pixabay.com/photo/2021/11/16/08/01/animal-6800387_960_720.jpg" id="exposImg1">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="https://cdn.pixabay.com/photo/2020/05/01/16/42/palacio-nacional-de-mafra-5118010_960_720.jpg" id="instagramImg2">
+                                        <img src="https://cdn.pixabay.com/photo/2020/05/01/16/42/palacio-nacional-de-mafra-5118010_960_720.jpg" id="exposImg2">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="https://cdn.pixabay.com/photo/2021/12/10/15/15/coleus-6860722_960_720.jpg" id="instagramImg3">
+                                        <img src="https://cdn.pixabay.com/photo/2021/12/10/15/15/coleus-6860722_960_720.jpg" id="exposImg3">
                                     </div>
                                     <div class="swiper-slide">
                                     </div>
@@ -169,14 +185,90 @@
 
                         </div>
                     </div>
-                  </div>
+                </div>
 
-<!------------------------------------------ Closing tags and script ---------------------------------------->
-                <div id="displayMoreButton">
-                    <div id="displayMoreIcon">
-                        <img src="commonFiles/img/addIcon.png">
+<!------------------------------------------ Workshop---------------------------------------->
+
+                  <div id="workshopContainer">
+                    <div id="workshopTitleContainer">
+                      WORKSHOPS
+                    </div>
+                    <div class="divSwiper">
+                        <div class="swiper">
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="https://cdn.pixabay.com/photo/2021/11/16/08/01/animal-6800387_960_720.jpg" id="workshopImg1">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="https://cdn.pixabay.com/photo/2020/05/01/16/42/palacio-nacional-de-mafra-5118010_960_720.jpg" id="workshopImg2">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="https://cdn.pixabay.com/photo/2021/12/10/15/15/coleus-6860722_960_720.jpg" id="workshopImg3">
+                                    </div>
+                                    <div class="swiper-slide">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
+
+<!------------------------------------------ Performances ---------------------------------------->
+
+                  <div id="performanceContainer">
+                    <div id="performanceTitleContainer">
+                        PERFORMANCES
+                      </div>
+                    <div class="divSwiper">
+                        <div class="swiper">
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="https://cdn.pixabay.com/photo/2021/11/16/08/01/animal-6800387_960_720.jpg" id="performanceImg1">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="https://cdn.pixabay.com/photo/2020/05/01/16/42/palacio-nacional-de-mafra-5118010_960_720.jpg" id="performanceImg2">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="https://cdn.pixabay.com/photo/2021/12/10/15/15/coleus-6860722_960_720.jpg" id="performanceImg3">
+                                    </div>
+                                    <div class="swiper-slide">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+<!------------------------------------------ Instagram ---------------------------------------->
+
+                <div id="instagramContainer">
+                    <div id="instagramTitleContainer">
+                      INSTAGRAM
+                    </div>
+                    <div class="divSwiper">
+                        <div class="swiper">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide-insta">
+                                        <img src="https://cdn.pixabay.com/photo/2021/11/16/08/01/animal-6800387_960_720.jpg" id="instagramImg1">
+                                    </div>
+                                    <div class="swiper-slide-insta">
+                                        <img src="https://cdn.pixabay.com/photo/2020/05/01/16/42/palacio-nacional-de-mafra-5118010_960_720.jpg" id="instagramImg2">
+                                    </div>
+                                    <div class="swiper-slide-insta">
+                                        <img src="https://cdn.pixabay.com/photo/2021/12/10/15/15/coleus-6860722_960_720.jpg" id="instagramImg3">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+<!------------------------------------------ Closing tags and script ---------------------------------------->
 
             </div> <!--id="contentContainer" closing tag-->
 

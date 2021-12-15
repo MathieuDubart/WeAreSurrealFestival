@@ -5,7 +5,9 @@ let xhttp = new XMLHttpRequest();
 let header= document.getElementById("header");
 let typoSelector = document.getElementById("typoContainer")
 let pdfButtonContainer = document.getElementById("pdfButtonContainer")
+let pdfDownload = document.getElementById("pdfDownload")
 let countdownContainer = document.getElementById("countdownContainer")
+let countdown = document.getElementById("countdown")
 let bookingIcon = document.getElementById("bookingIcon")
 let bookingButton = document.getElementById("bookingButton")
 
@@ -26,10 +28,49 @@ let conferenceImg1 = document.getElementById("conferenceImg1")
 let conferenceImg2 = document.getElementById("conferenceImg2")
 let conferenceImg3 = document.getElementById("conferenceImg3")
 
+//------------------- get expos elm --------------------//
+
+let exposContainer = document.getElementById("exposContainer")
+let exposTitleContainer = document.getElementById("exposTitleContainer")
+let exposImg1 = document.getElementById("exposImg1")
+let exposImg2 = document.getElementById("exposImg2")
+let exposImg3 = document.getElementById("exposImg3")
+
+//------------------- get booking elm --------------------//
+
+let bookingContainer = document.getElementById("bookingContainer")
+let bookingTitleContainer = document.getElementById("bookingTitleContainer")
+
+//------------------- get workshop elm --------------------//
+
+let workshopContainer = document.getElementById("workshopContainer")
+let workshopTitleContainer = document.getElementById("workshopTitleContainer")
+let workshopImg1 = document.getElementById("workshopImg1")
+let workshopImg2 = document.getElementById("workshopImg2")
+let workshopImg3 = document.getElementById("workshopImg3")
+
+//------------------- get performance elm --------------------//
+
+let performanceContainer = document.getElementById("performanceContainer")
+let performanceTitleContainer = document.getElementById("performanceTitleContainer")
+let performanceImg1 = document.getElementById("performanceImg1")
+let performanceImg2 = document.getElementById("performanceImg2")
+let performanceImg3 = document.getElementById("performanceImg3")
+
+//------------------- get performance elm --------------------//
+
+let instagramContainer = document.getElementById("instagramContainer")
+let instagramTitleContainer = document.getElementById("instagramTitleContainer")
+let instagramImg1 = document.getElementById("instagramImg1")
+let instagramImg2 = document.getElementById("instagramImg2")
+let instagramImg3 = document.getElementById("instagramImg3")
+
 //------------------- get others elm ----------------------//
 
+let pageContainer = document.getElementById("pageContainer")
 let contentContainer = document.getElementById("contentContainer")
 let displayMoreButton = document.getElementById("displayMoreButton")
+let surrealText = document.getElementById("surrealText")
 
 // ------------------ Get URL Parameters ------------------//
 
@@ -38,54 +79,45 @@ let url = new URL(str);
 let search_params = new URLSearchParams(url.search); 
 if(search_params.has('version')) {
   let version = search_params.get('version');
-  if (version === "1") {
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             let response_V1=this.responseText;
-            let baptisteInfos = JSON.parse(response_V1);
-            header.style.backgroundImage = baptisteInfos.backgroundImage
-            typoSelector.innerHTML = baptisteInfos.textForExample
-
-        }
+            let infos = JSON.parse(response_V1);
+            pageContainer.style.backgroundColor = infos.colorOne
+            pdfDownload.href = infos.pdf
+            typoSelector.style.fontFamily = infos.fontFamily
+            countdown.style.fontFamily = infos.fontFamily
+            countdown.style.top = infos.countdownTop
+            contentContainer.style.fontFamily = infos.fontFamily
+            header.style.backgroundImage = infos.backgroundImage
+            pdfButtonContainer.style.backgroundColor = infos.colorOne
+            pdfButtonContainer.style.color = infos.colorTwo
+            concertsContainer.style.backgroundColor = infos.colorOne
+            concertsTitleContainer.style.backgroundColor = infos.colorTwo
+            conferencesContainer.style.backgroundColor = infos.colorOne
+            conferencesTitleContainer.style.backgroundColor = infos.colorTwo
+            bookingContainer.style.backgroundColor = infos.colorTwo
+            bookingTitleContainer.style.backgroundColor = infos.colorTwo
+            exposContainer.style.backgroundColor = infos.colorOne
+            exposTitleContainer.style.backgroundColor = infos.colorTwo
+            workshopContainer.style.backgroundColor = infos.colorOne
+            workshopTitleContainer.style.backgroundColor = infos.colorTwo
+            performanceContainer.style.backgroundColor = infos.colorOne
+            performanceTitleContainer.style.backgroundColor = infos.colorTwo
+            conferencesContainer.style.backgroundColor = infos.colorOne
+            instagramContainer.style.backgroundColor = infos.colorOne
+            instagramTitleContainer.style.backgroundColor = infos.colorTwo
+            surrealText.style.color = infos.colorYellow
+          }
     };
     
-    xhttp.open("GET", "version_1/baptiste.json", true);
+    xhttp.open("GET", `version_${version}/data.json`, true);
     xhttp.send();
   }
-  if (version === "2") {
-      xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        let response_V2=this.responseText;
-        let killianInfos = JSON.parse(response_V2);
-        header.style.backgroundImage = killianInfos.backgroundImage
-        typoSelector.innerHTML = killianInfos.textForExample
-    }
-    };
 
-    xhttp.open("GET", "version_2/killian.json", true);
-    xhttp.send();
-  }
-  if (version === "3") {
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            let response_V3=this.responseText;
-            let melisseInfos = JSON.parse(response_V3);
-            header.style.backgroundImage = melisseInfos.backgroundImage
-            typoSelector.innerHTML = melisseInfos.textForExample
+// ------------------ Swiper  ------------------//
 
-
-        }
-    };
-    
-    xhttp.open("GET", "version_3/melisse.json", true);
-    xhttp.send();
-  }
-}
-
-
-// ------------------ Swiper for concerts ------------------//
-
-var swiper = new Swiper(".mySwiper", {
+let swiper = new Swiper(".mySwiper", {
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
@@ -142,81 +174,8 @@ bookingButton.addEventListener('mouseleave', (e) => {
 //---------------------- Display More Button --------------//
 
 displayMoreButton.addEventListener("click", (e) => {
-  contentContainer.innerHTML += `<div id="exposContainer">
-                                      <div id="exposTitleContainer">
-                                        Expositions
-                                      </div>
-                                      <div id="exposSwiper">
-                                          <div class="swiper">
-                                              <div class="swiper mySwiper">
-                                                  <div class="swiper-wrapper">
-                                                      <div class="swiper-slide">
-                                                          <img src="https://cdn.pixabay.com/photo/2021/11/16/08/01/animal-6800387_960_720.jpg" id="exposImg1">
-                                                      </div>
-                                                      <div class="swiper-slide">
-                                                          <img src="https://cdn.pixabay.com/photo/2020/05/01/16/42/palacio-nacional-de-mafra-5118010_960_720.jpg" id="exposImg2">
-                                                      </div>
-                                                      <div class="swiper-slide">
-                                                          <img src="https://cdn.pixabay.com/photo/2021/12/10/15/15/coleus-6860722_960_720.jpg" id="exposImg3">
-                                                      </div>
-                                                      <div class="swiper-slide">
-                                                      </div>
-                                                  </div>
-                                              </div>
-
-                                          </div>
-                                      </div>
-                                    </div>
-                                    
-                                    <div id="workshopContainer">
-                                      <div id="workshopTitleContainer">
-                                        Workshops
-                                      </div>
-                                      <div id="workshopSwiper">
-                                          <div class="swiper">
-                                              <div class="swiper mySwiper">
-                                                  <div class="swiper-wrapper">
-                                                      <div class="swiper-slide">
-                                                          <img src="https://cdn.pixabay.com/photo/2021/11/16/08/01/animal-6800387_960_720.jpg" id="workshopImg1">
-                                                      </div>
-                                                      <div class="swiper-slide">
-                                                          <img src="https://cdn.pixabay.com/photo/2020/05/01/16/42/palacio-nacional-de-mafra-5118010_960_720.jpg" id="workshopImg2">
-                                                      </div>
-                                                      <div class="swiper-slide">
-                                                          <img src="https://cdn.pixabay.com/photo/2021/12/10/15/15/coleus-6860722_960_720.jpg" id="workshopImg3">
-                                                      </div>
-                                                      <div class="swiper-slide">
-                                                      </div>
-                                                  </div>
-                                              </div>
-
-                                          </div>
-                                      </div>
-                                    </div>
-                                    
-                                    <div id="performanceContainer">
-                                      <div id="performanceTitleContainer">
-                                        Performances
-                                      </div>
-                                      <div id="performanceSwiper">
-                                          <div class="swiper">
-                                              <div class="swiper mySwiper">
-                                                  <div class="swiper-wrapper">
-                                                      <div class="swiper-slide">
-                                                          <img src="https://cdn.pixabay.com/photo/2021/11/16/08/01/animal-6800387_960_720.jpg" id="performanceImg1">
-                                                      </div>
-                                                      <div class="swiper-slide">
-                                                          <img src="https://cdn.pixabay.com/photo/2020/05/01/16/42/palacio-nacional-de-mafra-5118010_960_720.jpg" id="performanceImg2">
-                                                      </div>
-                                                      <div class="swiper-slide">
-                                                          <img src="https://cdn.pixabay.com/photo/2021/12/10/15/15/coleus-6860722_960_720.jpg" id="performanceImg3">
-                                                      </div>
-                                                      <div class="swiper-slide">
-                                                      </div>
-                                                  </div>
-                                              </div>
-
-                                          </div>
-                                      </div>
-                                    </div>`
+        exposContainer.style.display = "block"
+        workshopContainer.style.display = "block"
+        performanceContainer.style.display = "block"
+        displayMoreButton.style.display = "none"
 })

@@ -1,8 +1,0 @@
-{
-    "fontFamily": "Archivo Black",
-    "colorOne": "black",
-    "colorTwo": "white",
-    "backgroundColor": "black",
-    "textForExample": "Hello world this is baptiste's text and its used to display an exemple for my creator.",
-    "backgroundImage": "url('version_1/img/backgroundImage.jpg')"
-}
