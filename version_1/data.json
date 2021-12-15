@@ -6,5 +6,7 @@
     "backgroundImage": "url('version_1/img/backgroundImage.jpg')",
     "countdownTop": "calc(50% - 20px)",
     "pdf":"version_2/Brochure.pdf",
-    "border": "2px solid #405d79"
+    "border": "2px solid #405d79",
+    "fontForBilling": "'Archivo Black', sans-serif",
+    "NatashaZuppan": "version_3/img/Natasha_Zuppan.png"
 }

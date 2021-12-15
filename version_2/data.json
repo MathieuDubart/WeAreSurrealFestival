@@ -1,10 +1,15 @@
 {
     "fontFamily":"'Montserrat', sans-serif",
-    "colorOne":"rgb(119, 56, 75)",
-    "colorTwo":"rgb(171, 60, 62)",
-    "colorThree":"rgb(235, 138, 74)",
+    "colorOne":"white",
+    "colorTwo":"rgb(119, 56, 75)",
+    "colorYellow": "rgb(235, 138, 74)",
+    "colorThree":"rgb(119, 56, 75)",
+    "colorFour":"rgb(171, 60, 62)",
+    "colorFive":"rgb(235, 138, 74)",
     "backgroundImage": "url('version_2/img/backgroundImage.jpg')",
     "countdownTop": "calc(50% - 17.5px)",
     "pdf":"version_2/Brochure.pdf",
-    "border": "2px solid #405d79"
+    "border": "2px solid rgb(119, 56, 75)",
+    "fontForBilling": "'Archivo Black', sans-serif",
+    "NatashaZuppan": "version_3/img/Natasha_Zuppan.png"
 }

@@ -41,7 +41,7 @@ let exposImg3 = document.getElementById("exposImg3")
 let bookingContainer = document.getElementById("bookingContainer")
 let bookingTitleContainer = document.getElementById("bookingTitleContainer")
 let passSelect = document.getElementById("pass-select")
-let quantityselect = document.getElementById("quantity-select")
+let quantitySelect = document.getElementById("quantity-select")
 let addToCart = document.getElementById("addToCart")
 //------------------- get workshop elm --------------------//
 
@@ -74,7 +74,8 @@ let contentContainer = document.getElementById("contentContainer")
 let displayMoreButton = document.getElementById("displayMoreButton")
 let displayMoreIcon = document.getElementById("displayMoreIcon")
 let surrealText = document.getElementById("surrealText")
-
+let displayLessButton = document.getElementById("displayLessButton")
+let displayLessIcon = document.getElementById("displayLessIcon")
 // ------------------ Get URL Parameters ------------------//
 
 let str = window.location.href;
@@ -97,7 +98,7 @@ if(search_params.has('version')) {
 //------------------------- pdfButton elm -------------------------//
             pdfButtonContainer.style.backgroundColor = infos.colorOne
             pdfButtonContainer.style.color = infos.colorTwo
-
+            pdfButtonContainer.style.fontFamily = infos.fontFamily
 //------------------------- countdown elm -------------------------//
             countdown.style.fontFamily = infos.fontFamily
             countdown.style.top = infos.countdownTop
@@ -114,6 +115,8 @@ if(search_params.has('version')) {
 
 //------------------------- booking elm -------------------------//
             bookingContainer.style.backgroundColor = infos.colorTwo
+            passSelect.style.fontFamily = infos.fontForBilling
+            quantitySelect.style.fontFamily = infos.fontForBilling
             bookingTitleContainer.style.backgroundColor = infos.colorOne
             bookingTitleContainer.style.color = infos.colorTwo
             bookingTitleContainer.style.border = infos.border
@@ -130,7 +133,9 @@ if(search_params.has('version')) {
 //------------------------- performance elm -------------------------//
             performanceContainer.style.backgroundColor = infos.colorOne
             performanceTitleContainer.style.backgroundColor = infos.colorTwo
-            
+
+            performanceImg1.src = infos.NatashaZuppan
+
 //------------------------- instagram   elm -------------------------//
             instagramContainer.style.backgroundColor = infos.colorOne
             instagramTitleContainer.style.backgroundColor = infos.colorTwo
@@ -210,6 +215,17 @@ displayMoreButton.addEventListener('mouseenter', (e) => {
 displayMoreButton.addEventListener('mouseleave', (e) => {
   displayMoreIcon.src = "commonFiles/img/addIcon.png"
 }, false)
+
+//------------------------- display less icon --------------------//
+
+displayLessButton.addEventListener('mouseenter', (e) => {
+  displayLessIcon.src = "commonFiles/img/removeIconWhite.png"
+}, false)
+
+displayLessButton.addEventListener('mouseleave', (e) => {
+  displayLessIcon.src = "commonFiles/img/removeIcon.png"
+}, false)
+
 //---------------------- Display More Button --------------//
 
 displayMoreButton.addEventListener("click", (e) => {
@@ -217,4 +233,15 @@ displayMoreButton.addEventListener("click", (e) => {
         workshopContainer.style.display = "block"
         performanceContainer.style.display = "block"
         displayMoreButton.style.display = "none"
+        displayLessButton.style.display = "block"
+})
+
+//---------------------- Display More Button --------------//
+
+displayLessButton.addEventListener("click", (e) => {
+  exposContainer.style.display = "none"
+  workshopContainer.style.display = "none"
+  performanceContainer.style.display = "none"
+  displayMoreButton.style.display = "block"
+  displayLessButton.style.display = "none"
 })
