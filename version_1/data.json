@@ -2,12 +2,9 @@
     "fontFamily": "'Archivo Black', sans-serif",
     "colorOne":"white",
     "colorTwo":"#405d79",
-    "colorThree":"",
-    "colorWhite": "#d8e5fb",
-    "colorBlack": "black",
     "colorYellow": "yellow",
-    "textForExample": "Hello world this is baptiste's text and its used to display an exemple for my creator.",
     "backgroundImage": "url('version_1/img/backgroundImage.jpg')",
     "countdownTop": "calc(50% - 20px)",
-    "pdf":"version_2/Brochure.pdf"
+    "pdf":"version_2/Brochure.pdf",
+    "border": "2px solid #405d79"
 }

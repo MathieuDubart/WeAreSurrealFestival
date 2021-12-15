@@ -1,12 +1,9 @@
 {
     "fontFamily" : "'Dela Gothic One', cursive",
-    "colorOne":"#9ecca8",
-    "colorTwo":"#3c6d43",
-    "colorThree":"",
-    "colorWhite": "white",
-    "colorBlack": "black",
-    "textForExample": "Hello world this is melisse's text and its used to display an exemple for my creator.",
+    "colorOne":"white",
+    "colorTwo":"#9ecca8",
     "backgroundImage": "url('version_3/img/backgroundImage.jpg')",
-    "countdownTop": "calc(50% - 25px)",
-    "pdf":"version_2/Brochure.pdf"
+    "countdownTop": "calc(50% - 23px)",
+    "pdf":"version_2/Brochure.pdf",
+    "border": "2px solid #9ecca8"
 }

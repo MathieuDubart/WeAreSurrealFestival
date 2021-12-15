@@ -3,11 +3,8 @@
     "colorOne":"rgb(119, 56, 75)",
     "colorTwo":"rgb(171, 60, 62)",
     "colorThree":"rgb(235, 138, 74)",
-    "colorWhite": "white",
-    "colorBlack": "black",
-    "backgroundColor":"",
-    "textForExample": "Hello world this is killian's text and its used to display an exemple for my creator.",
     "backgroundImage": "url('version_2/img/backgroundImage.jpg')",
     "countdownTop": "calc(50% - 17.5px)",
-    "pdf":"version_2/Brochure.pdf"
+    "pdf":"version_2/Brochure.pdf",
+    "border": "2px solid #405d79"
 }

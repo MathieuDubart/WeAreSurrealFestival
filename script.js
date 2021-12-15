@@ -40,7 +40,9 @@ let exposImg3 = document.getElementById("exposImg3")
 
 let bookingContainer = document.getElementById("bookingContainer")
 let bookingTitleContainer = document.getElementById("bookingTitleContainer")
-
+let passSelect = document.getElementById("pass-select")
+let quantityselect = document.getElementById("quantity-select")
+let addToCart = document.getElementById("addToCart")
 //------------------- get workshop elm --------------------//
 
 let workshopContainer = document.getElementById("workshopContainer")
@@ -70,6 +72,7 @@ let instagramImg3 = document.getElementById("instagramImg3")
 let pageContainer = document.getElementById("pageContainer")
 let contentContainer = document.getElementById("contentContainer")
 let displayMoreButton = document.getElementById("displayMoreButton")
+let displayMoreIcon = document.getElementById("displayMoreIcon")
 let surrealText = document.getElementById("surrealText")
 
 // ------------------ Get URL Parameters ------------------//
@@ -84,30 +87,54 @@ if(search_params.has('version')) {
             let response_V1=this.responseText;
             let infos = JSON.parse(response_V1);
             pageContainer.style.backgroundColor = infos.colorOne
+
+//------------------------- header elm -------------------------//
             pdfDownload.href = infos.pdf
             typoSelector.style.fontFamily = infos.fontFamily
-            countdown.style.fontFamily = infos.fontFamily
-            countdown.style.top = infos.countdownTop
-            contentContainer.style.fontFamily = infos.fontFamily
             header.style.backgroundImage = infos.backgroundImage
+            surrealText.style.color = infos.colorYellow
+
+//------------------------- pdfButton elm -------------------------//
             pdfButtonContainer.style.backgroundColor = infos.colorOne
             pdfButtonContainer.style.color = infos.colorTwo
+
+//------------------------- countdown elm -------------------------//
+            countdown.style.fontFamily = infos.fontFamily
+            countdown.style.top = infos.countdownTop
+
+//------------------------- concerts elm -------------------------//
+            contentContainer.style.fontFamily = infos.fontFamily
             concertsContainer.style.backgroundColor = infos.colorOne
             concertsTitleContainer.style.backgroundColor = infos.colorTwo
+
+//------------------------- conferences elm -------------------------//
             conferencesContainer.style.backgroundColor = infos.colorOne
             conferencesTitleContainer.style.backgroundColor = infos.colorTwo
+            conferencesContainer.style.backgroundColor = infos.colorOne
+
+//------------------------- booking elm -------------------------//
             bookingContainer.style.backgroundColor = infos.colorTwo
-            bookingTitleContainer.style.backgroundColor = infos.colorTwo
+            bookingTitleContainer.style.backgroundColor = infos.colorOne
+            bookingTitleContainer.style.color = infos.colorTwo
+            bookingTitleContainer.style.border = infos.border
+
+//------------------------- expos elm -------------------------//
             exposContainer.style.backgroundColor = infos.colorOne
             exposTitleContainer.style.backgroundColor = infos.colorTwo
+            exposTitleContainer.style.color = infos.colorOne
+
+//------------------------- workshop elm -------------------------//
             workshopContainer.style.backgroundColor = infos.colorOne
             workshopTitleContainer.style.backgroundColor = infos.colorTwo
+
+//------------------------- performance elm -------------------------//
             performanceContainer.style.backgroundColor = infos.colorOne
             performanceTitleContainer.style.backgroundColor = infos.colorTwo
-            conferencesContainer.style.backgroundColor = infos.colorOne
+            
+//------------------------- instagram   elm -------------------------//
             instagramContainer.style.backgroundColor = infos.colorOne
             instagramTitleContainer.style.backgroundColor = infos.colorTwo
-            surrealText.style.color = infos.colorYellow
+            instagramTitleContainer.style.color = infos.colorOne
           }
     };
     
@@ -128,6 +155,9 @@ let swiper = new Swiper(".mySwiper", {
     depth: 100,
     modifier: 1,
     slideShadows: false,
+  },
+  autoplay: {
+    delay: 5000,
   },
 });
 
@@ -171,6 +201,15 @@ bookingButton.addEventListener('mouseleave', (e) => {
   bookingIcon.src = "commonFiles/img/bookingIconBlack.png"
 }, false)
 
+//------------------------- display more icon --------------------//
+
+displayMoreButton.addEventListener('mouseenter', (e) => {
+  displayMoreIcon.src = "commonFiles/img/addIconWhite.png"
+}, false)
+
+displayMoreButton.addEventListener('mouseleave', (e) => {
+  displayMoreIcon.src = "commonFiles/img/addIcon.png"
+}, false)
 //---------------------- Display More Button --------------//
 
 displayMoreButton.addEventListener("click", (e) => {
