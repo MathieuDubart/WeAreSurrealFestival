@@ -48,7 +48,7 @@
                 </div>
                 
                 <a href="commonFiles/brochure.pdf" download="brochure.pdf" target="_blank" id="pdfDownload"> <div id="pdfButtonContainer">
-                    BROCHURE <div id="pdfIcon"> <img src="commonFiles/img/pdfIcon.png"></div>
+                    BROCHURE <div id="pdfIcon"> <img src="commonFiles/img/pdfIcon.png"> </div>
                 </div> </a>
 
                 <div id="downArrowContainer">
@@ -61,7 +61,7 @@
             <div id="countdownContainer">
                 <div id="countdown">
                 </div>
-                <a href="#bookingContainer">
+                <a href="#bookingSection">
                     <div id="bookingButton">
                         <img src="commonFiles/img/bookingIconBlack.png" id="bookingIcon">
                     </div>
@@ -153,29 +153,6 @@
                     </div>
                 </div>
 
-<!------------------------------------------ Workshop---------------------------------------->
-
-                  <div id="workshopContainer">
-                    <div id="workshopTitleContainer">
-                      WORKSHOPS
-                    </div>
-                    <div class="divSwiper">
-                        <div class="swiper">
-                            <div class="swiper mySwiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="https://cdn.pixabay.com/photo/2021/11/16/08/01/animal-6800387_960_720.jpg" id="workshopImg1"> <p class="slideTitle"> 404.zero <br/> 18.05 - 22h00 </p> 
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="https://cdn.pixabay.com/photo/2020/05/01/16/42/palacio-nacional-de-mafra-5118010_960_720.jpg" id="workshopImg2"> <p class="slideTitle"> Full Story <br/> 19.05 - 22h00 </p> 
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
 <!------------------------------------------ Performances ---------------------------------------->
 
                   <div id="performanceContainer">
@@ -199,6 +176,30 @@
                     </div>
                 </div>
 
+<!------------------------------------------ Workshop---------------------------------------->
+
+                <div id="workshopContainer">
+                    <div id="workshopTitleContainer">
+                      WORKSHOPS
+                    </div>
+                    <div class="divSwiper">
+                        <div class="swiper">
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="https://cdn.pixabay.com/photo/2021/11/16/08/01/animal-6800387_960_720.jpg" id="workshopImg1"> <p class="slideTitle"> 404.zero <br/> 18.05 - 22h00 </p> 
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="https://cdn.pixabay.com/photo/2020/05/01/16/42/palacio-nacional-de-mafra-5118010_960_720.jpg" id="workshopImg2"> <p class="slideTitle"> Full Story <br/> 19.05 - 22h00 </p> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a name="bookingSection"></a>
+                
                 <div id="displayMoreButton">
                     <img src="commonFiles/img/addIcon.png" id="displayMoreIcon">
                 </div>
@@ -207,6 +208,8 @@
                 </div>
 <!------------------------------------------ Booking ---------------------------------------->
 
+<a name="bookingSection"></a>
+
 <div id="bookingContainer">
     <div id="bookingTitleContainer">
         RESERVER
@@ -214,8 +217,8 @@
 
     <select name="pass" id="pass-select">
         <option value="1day"> Pass 1 jour</option>
-        <option value="2days"> Pass  2 jours</option>
-        <option value="3days"> Pass  3 jours</option>
+        <option value="2days"> Pass 2 jours</option>
+        <option value="3days"> Pass 3 jours</option>
     </select>
 
     <select name="quantity" id="quantity-select">
@@ -225,7 +228,7 @@
         <option value="q4"> 4 </option>
     </select>
 
-    <button id="addToCart"> <img src="commonFiles/img/addToCart.png"></button>
+    <button id="addToCart"> <img src="commonFiles/img/addToCart.png" id="addToCartIcon"></button>
 </div>
 
 <!------------------------------------------ Instagram ---------------------------------------->
@@ -245,7 +248,10 @@
                                         <img src="https://cdn.pixabay.com/photo/2020/05/01/16/42/palacio-nacional-de-mafra-5118010_960_720.jpg" id="instagramImg2">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="https://cdn.pixabay.com/photo/2021/12/10/15/15/coleus-6860722_960_720.jpg" height="350px" width="350px" id="instagramImg3">
+                                        <img src="https://cdn.pixabay.com/photo/2021/12/10/15/15/coleus-6860722_960_720.jpg" id="instagramImg3">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="https://cdn.pixabay.com/photo/2021/12/10/15/15/coleus-6860722_960_720.jpg" id="instagramImg4">
                                     </div>
                                 </div>
                             </div>
@@ -253,10 +259,55 @@
                         </div>
                     </div>
                 </div>
-                    
+
+            <div id="linksContainer"> 
+                <div id="facebookLinkContainer">
+                    <div id="facebookLink">
+                        <a href="facebook.com" target="_blank" id="personnalFacebookLink"> FACEBOOK </a>
+                    </div>
+                </div>
+
+                <div id="instagramLinkContainer">
+                    <div id="instagramLink">
+                        <a href="" target="_blank" id="personnalInstagramLink"> INSTAGRAM </a>
+                    </div>
+                </div>
+            </div>
 <!------------------------------------------ Closing tags and script ---------------------------------------->
 
             </div> <!--id="contentContainer" closing tag-->
+
+<!------------------------------------------ footer  ---------------------------------------->
+
+            <div id="footerContainer">
+                <div id="footer">
+
+                    <div id="contactUs">
+                       <a href="mailto:contact@surreal-festival.fr" id="mailLink"> Nous Contacter </a>
+                    </div>
+
+                    <div id="logosContainer">
+
+                        <div id="logoGZ">
+                            <img src="commonFiles/img/grndZero.png" height="50px" width="50px"  class="logo">
+                        </div>
+
+                        <div id="logoMC">
+                            <img src="commonFiles/img/confluence.png" height="50px" width="150px"  class="logo">
+                        </div>
+
+                        <div id="logoVL">
+                            <img src="commonFiles/img/villeLyon.png" height="50px" width="150px"  class="logo">
+                        </div>
+
+                    </div>
+
+                    <div id="legalMentions">
+                        &#169; Gobelins - 2021/2022
+                    </div>
+                    
+                </div>
+            </div>
 
         </div> <!--id="body" closing tag-->
     </div> <!--id="pageContainer" closing tag-->

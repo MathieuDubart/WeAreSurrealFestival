@@ -43,6 +43,7 @@ let bookingTitleContainer = document.getElementById("bookingTitleContainer")
 let passSelect = document.getElementById("pass-select")
 let quantitySelect = document.getElementById("quantity-select")
 let addToCart = document.getElementById("addToCart")
+let addToCartIcon = document.getElementById("addToCartIcon")
 //------------------- get workshop elm --------------------//
 
 let workshopContainer = document.getElementById("workshopContainer")
@@ -59,13 +60,17 @@ let performanceImg1 = document.getElementById("performanceImg1")
 let performanceImg2 = document.getElementById("performanceImg2")
 let performanceImg3 = document.getElementById("performanceImg3")
 
-//------------------- get performance elm --------------------//
+//------------------- get insta elm --------------------//
 
 let instagramContainer = document.getElementById("instagramContainer")
 let instagramTitleContainer = document.getElementById("instagramTitleContainer")
 let instagramImg1 = document.getElementById("instagramImg1")
 let instagramImg2 = document.getElementById("instagramImg2")
 let instagramImg3 = document.getElementById("instagramImg3")
+let instagramImg4 = document.getElementById("instagramImg4")
+let facebookLinkContainer = document.getElementById("facebookLinkContainer")
+let instagramLinkContainer = document.getElementById("instagramLinkContainer")
+let personnalInstagramLink = document.getElementById("personnalInstagramLink")
 
 //------------------- get others elm ----------------------//
 
@@ -76,6 +81,7 @@ let displayMoreIcon = document.getElementById("displayMoreIcon")
 let surrealText = document.getElementById("surrealText")
 let displayLessButton = document.getElementById("displayLessButton")
 let displayLessIcon = document.getElementById("displayLessIcon")
+let footerContainer = document.getElementById("footerContainer")
 // ------------------ Get URL Parameters ------------------//
 
 let str = window.location.href;
@@ -91,14 +97,16 @@ if(search_params.has('version')) {
 
 //------------------------- header elm -------------------------//
             pdfDownload.href = infos.pdf
+            pdfButtonContainer.style.fontSize = infos.fontSizePDF
             typoSelector.style.fontFamily = infos.fontFamily
             header.style.backgroundImage = infos.backgroundImage
-            surrealText.style.color = infos.colorYellow
+            surrealText.style.color = infos.surrealColor
 
 //------------------------- pdfButton elm -------------------------//
             pdfButtonContainer.style.backgroundColor = infos.colorOne
             pdfButtonContainer.style.color = infos.colorTwo
             pdfButtonContainer.style.fontFamily = infos.fontFamily
+
 //------------------------- countdown elm -------------------------//
             countdown.style.fontFamily = infos.fontFamily
             countdown.style.top = infos.countdownTop
@@ -106,40 +114,74 @@ if(search_params.has('version')) {
 //------------------------- concerts elm -------------------------//
             contentContainer.style.fontFamily = infos.fontFamily
             concertsContainer.style.backgroundColor = infos.colorOne
-            concertsTitleContainer.style.backgroundColor = infos.colorTwo
+            concertsTitleContainer.style.backgroundColor = infos.colorThree
+            concertsTitleContainer.style.fontSize = infos.fontSize
+            concertImg1.src = infos.concert1_2
+            concertImg2.src = infos.concert1_2
+            concertImg3.src = infos.concert3
+            concertImg4.src = infos.concert4
 
 //------------------------- conferences elm -------------------------//
             conferencesContainer.style.backgroundColor = infos.colorOne
-            conferencesTitleContainer.style.backgroundColor = infos.colorTwo
+            conferencesTitleContainer.style.backgroundColor = infos.colorThree
+            conferencesTitleContainer.style.fontSize = infos.fontSize
             conferencesContainer.style.backgroundColor = infos.colorOne
+            conferenceImg1.src = infos.conference1
+            conferenceImg2.src = infos.conference2
+            conferenceImg3.src = infos.conference3
 
 //------------------------- booking elm -------------------------//
             bookingContainer.style.backgroundColor = infos.colorTwo
             passSelect.style.fontFamily = infos.fontForBilling
             quantitySelect.style.fontFamily = infos.fontForBilling
             bookingTitleContainer.style.backgroundColor = infos.colorOne
-            bookingTitleContainer.style.color = infos.colorTwo
+            bookingTitleContainer.style.fontSize = infos.fontSize
+            bookingTitleContainer.style.color = infos.colorThree
             bookingTitleContainer.style.border = infos.border
 
 //------------------------- expos elm -------------------------//
             exposContainer.style.backgroundColor = infos.colorOne
-            exposTitleContainer.style.backgroundColor = infos.colorTwo
+            exposTitleContainer.style.backgroundColor = infos.colorThree
             exposTitleContainer.style.color = infos.colorOne
-
-//------------------------- workshop elm -------------------------//
-            workshopContainer.style.backgroundColor = infos.colorOne
-            workshopTitleContainer.style.backgroundColor = infos.colorTwo
+            exposTitleContainer.style.fontSize = infos.fontSize
+            exposImg1.src = infos.expo1
+            exposImg2.src = infos.expo2
 
 //------------------------- performance elm -------------------------//
             performanceContainer.style.backgroundColor = infos.colorOne
-            performanceTitleContainer.style.backgroundColor = infos.colorTwo
+            performanceTitleContainer.style.backgroundColor = infos.colorThree
+            performanceTitleContainer.style.fontSize = infos.fontSize
+            performanceImg1.src = infos.performance1
+            performanceImg2.src = infos.performance2
 
-            performanceImg1.src = infos.NatashaZuppan
+//------------------------- workshop elm -------------------------//
+            workshopContainer.style.backgroundColor = infos.colorOne
+            workshopTitleContainer.style.backgroundColor = infos.colorThree
+            workshopTitleContainer.style.fontSize = infos.fontSize
+            workshopImg1.src = infos.workshop1
+            workshopImg2.src = infos.workshop2
 
-//------------------------- instagram   elm -------------------------//
+//------------------------- instagram elm -------------------------//
             instagramContainer.style.backgroundColor = infos.colorOne
-            instagramTitleContainer.style.backgroundColor = infos.colorTwo
+            instagramTitleContainer.style.backgroundColor = infos.colorThree
+            instagramTitleContainer.style.fontSize = infos.fontSize
             instagramTitleContainer.style.color = infos.colorOne
+            instagramImg1.src = infos.instagram1
+            instagramImg2.src = infos.instagram2
+            instagramImg3.src = infos.instagram3
+            instagramImg4.src = infos.instagram4
+            facebookLinkContainer.style.backgroundColor = infos.colorThree
+            facebookLinkContainer.style.color = infos.colorOne
+            facebookLinkContainer.style.fontFamily = infos.fontFamily
+            instagramLinkContainer.style.backgroundColor = infos.colorThree
+            instagramLinkContainer.style.color = infos.colorOne
+            instagramLinkContainer.style.fontFamily = infos.fontFamily
+            personnalInstagramLink.href = infos.instagramLink
+
+//------------------------- footer elm -------------------------//
+            footerContainer.style.backgroundColor = infos.colorTwo
+            footerContainer.style.color = infos.colorTwo
+            footerContainer.style.fontFamily= infos.fontFamily
           }
     };
     
@@ -193,6 +235,8 @@ let x = setInterval(function() {
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "Le festival a commencé";
+    bookingButton.style.display = "none"
+    bookingContainer.style.display = "none"
   }
 }, 1000);
 
@@ -205,6 +249,17 @@ bookingButton.addEventListener('mouseenter', (e) => {
 bookingButton.addEventListener('mouseleave', (e) => {
   bookingIcon.src = "commonFiles/img/bookingIconBlack.png"
 }, false)
+
+//------------------------- add to cart icon --------------------//
+
+addToCart.addEventListener('mouseenter', (e) => {
+  addToCartIcon.src = "commonFiles/img/addToCartWhite.png"
+}, false)
+
+addToCart.addEventListener('mouseleave', (e) => {
+  addToCartIcon.src = "commonFiles/img/addToCart.png"
+}, false)
+
 
 //------------------------- display more icon --------------------//
 
