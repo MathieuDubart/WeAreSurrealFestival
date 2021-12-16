@@ -8,7 +8,7 @@
     "surrealColor": "yellow",
     "backgroundImage": "url('version_1/img/backgroundImage.jpg')",
     "countdownTop": "calc(50% - 20px)",
-    "pdf":"version_2/Brochure.pdf",
+    "pdf":"version_2/brochure.pdf",
     "border": "2px solid #405d79",
     "fontForBilling": "'Archivo Black', sans-serif",
     "concert1_2": "version_1/img/concerts/ccrt1_2.png",
