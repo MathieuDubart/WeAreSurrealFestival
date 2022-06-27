@@ -210,7 +210,7 @@ let swiper = new Swiper(".mySwiper", {
 
 // ------------------ Countdown -------------------//
 
-let countDownDate = new Date("Mar 18, 2022 18:00:00").getTime();
+let countDownDate = new Date("Mar 18, 2023 18:00:00").getTime();
 
 // Update the count down every 1 second
 let x = setInterval(function() {
